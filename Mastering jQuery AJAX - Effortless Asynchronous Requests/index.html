@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Example | Coding Room</title>
+
+    <!-- Add this script tag to your HTML file to include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h2>Check the blog:- <a href="https://codingroom.in/jquery-ajax/">Mastering jQuery AJAX - Effortless Asynchronous Requests</a></h2>
+    <button id="fetchDataBtn">Fetch User Data</button>
+    <div id="userInfo"></div>
+
+    <script>
+        $(document).ready(function() {
+            $("#fetchDataBtn").click(function() {
+                $.ajax({
+                    url: "https://api.github.com/users/roomofcode",
+                    method: "GET",
+                    success: function(response) {
+                        // Display user info on the HTML page
+                        $("#userInfo").html("<p>Name: " + response.name + "</p>" +
+                            "<p>Location: " + response.location + "</p>" +
+                            "<p>Public Repositories: " + response.public_repos + "</p>");
+                    },
+                    error: function(xhr, status, error) {
+                        // Handle error
+                        console.error("Error:", error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
