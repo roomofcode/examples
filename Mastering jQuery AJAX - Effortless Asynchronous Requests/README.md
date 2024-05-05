@@ -4,4 +4,4 @@
 
 ## Blog
 
-<h2>Check blog:- <a href="https://codingroom.in/jquery-ajax/">Mastering jQuery AJAX - Effortless Asynchronous Requests</a></h2>
+Check blog: <a href="https://codingroom.in/jquery-ajax/">Mastering jQuery AJAX - Effortless Asynchronous Requests</a>
